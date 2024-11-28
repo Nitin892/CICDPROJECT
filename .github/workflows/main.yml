@@ -40,7 +40,7 @@ jobs:
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.CICDDJANGO }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             cd /home/ubuntu/CICDPROJECT
             git pull origin main
