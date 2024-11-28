@@ -37,6 +37,7 @@ jobs:
 
       - name: Deploy to Production
         uses: appleboy/ssh-action@v0.1.5
+        debug: true  # Enable debug mode
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SSH_USER }}
