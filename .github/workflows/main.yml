@@ -42,9 +42,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.CICDDJANGO }}
           script: |
-            cd /home/ubuntu/Tests/Production
+            cd /home/ubuntu/CICDPROJECT
             git pull origin main
             source django_env/bin/activate
             pip install -r requirements.txt
             python manage.py migrate
-            systemctl restart Production.service
+            systemctl restart CICDDJANGO.service
